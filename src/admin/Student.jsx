@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Axios from "axios";
+// import Axios from "axios";
+import axios from "./api/axios";
 import NavA from "./NavA";
 
 const Student = () => {
@@ -45,9 +46,7 @@ const Student = () => {
     );
     if (confirmed) {
       try {
-        const response = await Axios.delete(
-          `http://localhost:3001/api/studentData/${id}`
-        );
+        const response = await axios.delete(`studentData/${id}`);
 
         if (response.status === 204) {
           alert("Student Deleted Successfully.");
@@ -68,9 +67,7 @@ const Student = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await Axios.get(
-          `http://localhost:3001/api/studentList?sectionID=${sectionID}`
-        );
+        const response = await axios.get(`studentList?sectionID=${sectionID}`);
         setStudentData(response.data);
       } catch (error) {
         console.error(error);
@@ -83,14 +80,11 @@ const Student = () => {
 
   const updateStudent = async () => {
     try {
-      const response = await Axios.put(
-        `http://localhost:3001/api/studentData/${editStudentId}`,
-        {
-          firstName: editFirstName,
-          lastName: editLastName,
-          sectionID: editSectionID,
-        }
-      );
+      const response = await axios.put(`studentData/${editStudentId}`, {
+        firstName: editFirstName,
+        lastName: editLastName,
+        sectionID: editSectionID,
+      });
 
       if (response.status === 200) {
         alert("Student Updated Successfully.");

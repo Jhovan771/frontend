@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Axios from "axios";
+import axios from "../admin/api/axios";
 
 const MRegister = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -55,11 +55,12 @@ const MRegister = () => {
 
     if (password === confirmPassword && password.length >= 8) {
       if (username && username.includes("@mail.com")) {
-        Axios.post("http://localhost:3001/api/insert", {
-          UserID: accountNumber,
-          username: username,
-          password: password,
-        })
+        axios
+          .post("insert", {
+            UserID: accountNumber,
+            username: username,
+            password: password,
+          })
           .then((response) => {
             console.log("Response received:", response.data);
             if (response.data.toLowerCase() === "data inserted successfully") {

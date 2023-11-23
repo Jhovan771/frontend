@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavA from "../NavA";
-import Axios from "axios";
 import { Bar } from "react-chartjs-2";
+import axios from "../api/axios";
 
 const Examination = () => {
   const { studentID } = useParams();
@@ -124,9 +124,7 @@ const Examination = () => {
   useEffect(() => {
     const fetchStudentDetails = async () => {
       try {
-        const response = await Axios.get(
-          `http://localhost:3001/api/studentExam?studentID=${studentID}`
-        );
+        const response = await axios.get(`studentExam?studentID=${studentID}`);
         setStudentData(response.data);
       } catch (error) {
         console.error(error);
@@ -160,7 +158,7 @@ const Examination = () => {
       console.log("Submitting score:", { studentID, totalScore });
 
       // Send the data to the server
-      await Axios.post("http://localhost:3001/api/submitScore", {
+      await axios.post("submitScore", {
         studentID,
         totalScore,
       });

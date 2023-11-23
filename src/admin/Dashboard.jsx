@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import NavA from "./NavA";
 import setting from "../assets/settig.png";
-import Axios from "axios";
 import Setting from "../assets/setting.png";
 import { Link } from "react-router-dom";
+import axios from "./api/axios";
 
 const Dashboard = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -61,9 +61,10 @@ const Dashboard = () => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      Axios.get("http://localhost:3001/api/getUserId", {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      axios
+        .get("getUserId", {
+          headers: { Authorization: `Bearer ${token}` },
+        })
         .then((response) => {
           setUserId(response.data.userId);
         })
@@ -75,9 +76,7 @@ const Dashboard = () => {
 
   const deleteSection = async (sectionName) => {
     try {
-      const response = await Axios.delete(
-        `http://localhost:3001/api/deleteSection/${sectionName}`
-      );
+      const response = await axios.delete(`deleteSection/${sectionName}`);
 
       if (response.status === 204) {
         console.log("Section deleted successfully.");
@@ -98,13 +97,10 @@ const Dashboard = () => {
 
   const updateList = async () => {
     try {
-      const response = await Axios.put(
-        "http://localhost:3001/api/updateSName",
-        {
-          newSName: sname,
-          sname: originalSName,
-        }
-      );
+      const response = await axios.put("updateSName", {
+        newSName: sname,
+        sname: originalSName,
+      });
 
       if (response.status === 200) {
         console.log("Name updated successfully.");
@@ -126,7 +122,7 @@ const Dashboard = () => {
 
   const addlist = async () => {
     try {
-      const response = await Axios.post("http://localhost:3001/api/insection", {
+      const response = await axios.post("insection", {
         sname: sname,
         userID: userId, // Include the userId directly in the payload
       });
@@ -154,14 +150,11 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const response = await Axios.get(
-          "http://localhost:3001/api/sectionList",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await axios.get("sectionList", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         setSectionData(response.data);
       } catch (error) {
@@ -189,7 +182,7 @@ const Dashboard = () => {
     console.log("sectionID:", sectionID);
 
     try {
-      const response = await Axios.post("http://localhost:3001/api/students", {
+      const response = await axios.post("students", {
         firstName: firstName,
         lastName: lastName,
         sectionID: sectionID,

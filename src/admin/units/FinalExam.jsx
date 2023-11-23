@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import NavA from "../NavA";
-import Axios from "axios";
+import axios from "../api/axios";
 
 const FinalExam = () => {
   const [studentData, setStudentData] = useState([]);
@@ -11,7 +11,7 @@ const FinalExam = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await Axios.get(
+        const response = await axios.get(
           `http://localhost:3001/api/studentList?sectionID=${sectionID}`
         );
         setStudentData(response.data);

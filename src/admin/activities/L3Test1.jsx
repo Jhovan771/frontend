@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import NavA from "../NavA";
-import Axios from "axios";
+import axios from "../api/axios";
 
 const L3Test1 = () => {
   const wordData = ["Funny", "Like", "Yell", "Happy"];
@@ -105,9 +105,7 @@ const L3Test1 = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await Axios.get(
-          `http://localhost:3001/api/studentList?sectionID=${sectionID}`
-        );
+        const response = await axios.get(`studentList?sectionID=${sectionID}`);
         setStudentData(response.data);
       } catch (error) {
         console.error(error);
@@ -126,9 +124,7 @@ const L3Test1 = () => {
       setScore(0);
       setQuizItemsCorrectness(Array(wordData.length).fill(""));
 
-      const response = await Axios.get(
-        `http://localhost:3001/api/student?studentID=${studentID}`
-      );
+      const response = await axios.get(`student?studentID=${studentID}`);
       setSelectedStudent(response.data);
     } catch (error) {
       console.error(error);
@@ -138,13 +134,10 @@ const L3Test1 = () => {
 
   const updateTotalScore = async (studentID, newScore) => {
     try {
-      const response = await Axios.post(
-        "http://localhost:3001/api/updateTotalScore",
-        {
-          studentID,
-          newScore,
-        }
-      );
+      const response = await axios.post("updateTotalScore", {
+        studentID,
+        newScore,
+      });
       console.log(response.data);
     } catch (error) {
       console.error(error);

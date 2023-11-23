@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import NavA from "../NavA";
 import Axios from "axios";
+import axios from "../api/axios";
 
 const L1Test1 = () => {
   const wordData = ["Sunny", "Found", "Thirsty", "Water"];
@@ -105,9 +106,7 @@ const L1Test1 = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await Axios.get(
-          `http://localhost:3001/api/studentList?sectionID=${sectionID}`
-        );
+        const response = await axios.get(`studentList?sectionID=${sectionID}`);
         setStudentData(response.data);
       } catch (error) {
         console.error(error);
