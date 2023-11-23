@@ -307,7 +307,6 @@ const Lesson1 = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className='units-control'>Hello Instructions</div> */}
               </div>
             </div>
           </div>
