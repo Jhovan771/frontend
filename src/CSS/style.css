@@ -1,0 +1,1281 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+/*LOGIN CSS STYLE START*/
+.login-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.login-wrapper {
+  height: 300px;
+  width: 488px;
+  border: 1px black solid;
+  background-color: whitesmoke;
+  box-shadow: 0 0 15px black;
+}
+.h3-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px black solid;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+}
+.h3-control-header {
+  padding: 4px;
+  margin: 2px;
+  width: 100%;
+}
+.h3-control {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 160px;
+}
+.textbox-wrapper {
+  padding: 0 12px 8px 12px;
+  height: 62px;
+}
+.textbox {
+  display: flex;
+}
+.textbox-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 44px;
+  margin-top: 4px;
+}
+.input-field {
+  padding: 10px;
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+}
+.textbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 44px;
+}
+.textbox-icon:hover {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.login-links {
+  width: 100%;
+  height: 24px;
+  border-top: 2px solid black;
+}
+.login-or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-size: 18px;
+}
+.login-link {
+  text-decoration: underline;
+}
+.input-field.expanded {
+  height: 44px !important;
+}
+.login-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  margin: 0 20px 6px 20px;
+}
+.login-btn {
+  border-radius: 4px;
+  background-color: #047eaa;
+  color: antiquewhite;
+  font-size: 24px;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.login-btn:hover {
+  cursor: pointer;
+  background-color: #1434a4;
+  box-shadow: 0 0 10px black;
+}
+/*LOGIN CSS STYLE END*/
+/*Register CSS Style Start*/
+.register-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.register-wrapper {
+  height: 480px;
+  width: 488px;
+  border: 1px black solid;
+  background-color: whitesmoke;
+  box-shadow: 0 0 15px black;
+}
+.register-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: auto;
+}
+.register-button {
+  width: 95%;
+  height: 38px;
+  font-size: 22px;
+  margin: 10px 0 10px 0;
+  background-color: #06840a;
+}
+.register-button:hover {
+  background-color: #06840a;
+  color: wheat;
+  transition: 0.5s;
+  box-shadow: 0 0 10px black;
+}
+.input-field-number:disabled {
+  padding: 10px;
+  width: 70%;
+  height: 44px;
+  font-size: 16px;
+  background: #dddddd;
+  top: 144px;
+}
+.generate-number-button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #008cba;
+}
+.generate-number-button:hover {
+  background-color: #047eaa;
+  transition: 0.5s;
+  box-shadow: 0 0 10px black;
+}
+.generate-number-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 44px;
+}
+.h3-register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px black solid;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+}
+/*Register CSS Style End*/
+
+/*NAVBAR CSS START*/
+.body {
+  background: transparent;
+  width: 100%;
+  position: inline-block;
+}
+.header {
+  width: 80%;
+  height: 70px;
+  background: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+}
+.logo {
+  width: 120px;
+  margin-top: 8px;
+}
+nav .logo {
+  display: none;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  color: #212526;
+  display: block;
+  margin: 0 2px;
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+nav ul li a:hover {
+  background: #f6f4ff;
+  color: black;
+  border: 1px solid black;
+}
+nav ul li a.active {
+  background: #675cff;
+  color: #fff;
+}
+.hamburger {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.hamburger:hover {
+  background: #f6f4ff;
+}
+.hamburger div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #212526;
+}
+@media only screen and (max-width: 1100px) {
+  .header {
+    width: 90%;
+    padding: 0 20px;
+  }
+  nav {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 999;
+    width: 280px;
+    height: 100vh;
+    background-color: #fefefe;
+    transition: 0.2s;
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+  }
+  #nav_check:checked ~ nav {
+    left: 0;
+  }
+  nav .logo {
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  nav ul li a {
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  nav ul {
+    display: block;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/*NAVBAR CSS END*/
+
+/*HOME CSS START*/
+.home-main {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.home-wrapper {
+  width: 80%;
+  height: 100px;
+  background: #fefefe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 55px;
+  height: 80%;
+}
+.words-wrapper {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  padding: 10px;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+.img-wrapper {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+.name-home {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+.remark-home {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.sub-title-wrapper {
+  font-weight: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: black;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  background: #106d70;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f6f4ff;
+  color: black;
+  border: 1px solid black;
+}
+/*HOME CSS END*/
+
+/*ABOUT CSS START*/
+.about-main {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.about-wrapper {
+  width: 80%;
+  height: 100px;
+  background: #fefefe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 55px;
+  height: 80%;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 90%;
+  padding: 0 10px;
+}
+.content-control {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 60px;
+  border: 1px solid bisque;
+}
+.img-control {
+  width: 70%;
+  border-radius: 90px;
+  margin: 20px;
+}
+.AName {
+  font-weight: bolder;
+  font-style: normal;
+  font-size: larger;
+}
+.ATitle {
+  margin: 10px;
+  font-weight: bold;
+  font-size: small;
+}
+.AQoute {
+  padding: 0 10px;
+  display: flex;
+  justify-content: start;
+  font-style: normal;
+  font-style: italic;
+  font-weight: 600;
+}
+/*ABOUT CSS END  j*/
+/*DASHBOARD CSS START*/
+.th-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.td-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.dashboard-main {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.dashboard-wrapper {
+  width: 80%;
+  height: 100px;
+  background: #fefefe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 55px;
+  height: 80%;
+}
+.addlist-main {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.addlist-wrapper {
+  width: 60%;
+  background: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-top: 40px;
+  height: 90%;
+  overflow-y: auto;
+}
+.section-list {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.section-list td,
+.section-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.section-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.section-list:hover {
+  background-color: #ddd;
+}
+.section-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #047eaa;
+  color: white;
+}
+.table-data-control {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.btn-delete {
+  background-color: red;
+  padding: 0 10px;
+  margin: 7px;
+  height: 30px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.btn-edit {
+  background-color: green;
+  padding: 0 10px;
+  height: 30px;
+  margin: 7px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.btn-view {
+  background-color: #047eaa;
+  padding: 0 10px;
+  height: 30px;
+  margin: 7px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.btn-delete:hover,
+.btn-edit:hover,
+.btn-view:hover {
+  background-color: #ddd;
+  color: black;
+  transition: 0.3s;
+}
+.section-th {
+  margin: 20%;
+}
+.add-student-to-section {
+  width: 20%;
+  height: 65%;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 10px 10px;
+  border-right: 3px solid black;
+  background-color: white;
+}
+.add-new-student-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+.add-new-student-content {
+  margin-top: 50px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button-for-new-student-submission {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-new-student {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submit-new-student:hover {
+  background-color: #008cba;
+  color: white;
+}
+/*DASHBOARD CSS END*/
+/*STUDENT ADMIN CSS START*/
+.edit-student-to-section {
+  width: 20%;
+  height: 75%;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 10px 10px;
+  border-right: 3px solid black;
+  background-color: white;
+}
+.start-class {
+  background-color: #1434a4; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.start-class:hover {
+  background-color: #0437f2;
+  color: #7df9ff;
+}
+/*STUDENT ADMIN CSS START*/
+/*MODAL CSS START*/
+.modal-all {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  min-height: 100vh;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 350px;
+  top: 20%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  position: absolute; /* or fixed */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.modal p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+}
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+.btn2 {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 70rem;
+  text-align: center;
+  font-size: 1em;
+}
+.btn2:hover {
+  border: 2px solid black;
+  background-color: #f6f4ff;
+  color: black;
+  transition: 0.4s;
+}
+.btn2-open {
+  position: absolute;
+  bottom: 150px;
+  height: 3.5rem;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+}
+.btn2-close {
+  transform: translate(10px, -20px);
+  padding: 0.7rem 0.7rem;
+  background: #a3a3a3;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+.user-id {
+  margin: 8px;
+  border: 2px black solid;
+  background-color: rgb(150, 150, 150);
+  text-align: center;
+  box-shadow: 0 0 8px;
+}
+/*MODAL CSS END*/
+/*Student Practice Section CSS START*/
+.box-main-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+.box-control-1 {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+.box-control-2 {
+  display: flex;
+  border: 2px solid red;
+  width: 100%;
+  height: 20%;
+  padding: 5px;
+}
+.box-1 {
+  width: 60%;
+}
+.box-2 {
+  width: 39%;
+  border-left: 3px solid black;
+}
+.box-content-1 {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-size: 24px;
+  padding: 10px;
+}
+.box-content-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+.box-content-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  height: 20%;
+}
+.prac-p-controller {
+  font-size: x-large;
+}
+.prac-h3-controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: none;
+}
+.mini-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  height: 3rem;
+  width: 10rem;
+}
+.mini-box:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+.mic-controller:hover {
+  cursor: pointer;
+}
+.correct {
+  background-color: green;
+}
+.incorrect {
+  background-color: red;
+}
+.content-img {
+  width: 50%;
+  height: 100%;
+}
+/*Student Practice Section CSS END*/
+/*START CLASS CSS START*/
+.class-section-main {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+.class-section-wrapper {
+  width: 80%;
+  height: 100px;
+  background: #fefefe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  margin-top: 20px;
+  height: 95%;
+}
+.class-section-sidebar {
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #edeade;
+  box-shadow: 3px 0px 10px;
+}
+.class-section-content {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+}
+.class-section-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.class-sidebar-header {
+  height: 10%;
+}
+.class-sidebar-menu {
+  margin: 40px 0px 40px 0px;
+  height: 90%;
+  color: black;
+}
+.class-sidebar-semi-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+/*START CLASS CSS END*/
+/*UNIT 1 CSS START*/
+.img-words-container {
+  height: 100%;
+  width: 100%;
+  background-color: wheat;
+}
+.img-words-main-container {
+  display: flex;
+  width: 100%;
+  height: 95%;
+}
+.img-words-sub-container-1,
+.img-words-sub-container-2 {
+  display: flex;
+  margin: 1px;
+  padding: none;
+  height: 50%;
+  width: 100%;
+  border: 3px black solid;
+}
+.img-words-sub-container-3 {
+  width: 30%;
+  background-color: wheat;
+}
+.img-words-special-container {
+  width: 70%;
+  margin: 1px;
+}
+.img-control-unit {
+  height: 80%;
+}
+.word-control {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 20%;
+}
+.image-div {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: red;
+}
+.units-control {
+  border: 2px black solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 50%;
+  width: 100%;
+}
+.h2-lesson-control {
+  width: 14rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.h2-lesson-control:hover {
+  background-color: #ddd;
+}
+.lesson-icon-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.link-css-control {
+  font-size: 14px;
+  width: 20rem;
+}
+.link-css-control:hover {
+  background-color: #ddd;
+}
+.h3-word-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+  width: 100%;
+}
+.h3-word-control:hover {
+  background: #ddd;
+}
+.title-voice-changer-control {
+  display: flex;
+  justify-content: space-between;
+}
+.control-wrapper {
+  height: 100%;
+  background-color: #ddd;
+}
+.control-word {
+  display: flex;
+  background-color: #ddd;
+  height: 35%;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+.control-trigger-button {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  padding: 2px 0px 2px 0px;
+  height: 52px;
+  margin: none;
+}
+.lesson-1-btn-wrapper-green {
+  background-color: #4caf50;
+  border-radius: 12px;
+  width: 100%;
+  margin: 0 3px 0 3px;
+}
+.lesson-1-btn-wrapper-green:hover {
+  background-color: #ddd;
+  border: 2px black solid;
+  transition: 0.5s;
+}
+.indicator-wrapper,
+.control-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  font-size: larger;
+}
+.control-indicator {
+  height: 44px;
+  width: 100%;
+}
+.green {
+  color: white;
+  background-color: green;
+}
+.red {
+  color: white;
+  background-color: rgb(145, 3, 3);
+}
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(100, 0, 0);
+  animation: none;
+  height: 44px;
+  width: 44px;
+  border-radius: 90px;
+  margin-top: 4px;
+}
+.active-listening {
+  background-color: blue;
+  animation: blink 2s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: red;
+  margin-top: 4px;
+  height: 22px;
+}
+/*UNIT 1 CSS END*/
+/*TEST UI START*/
+.class-test-main-wrapper {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2),
+    5px 5px 5px 0 rgba(0, 0, 0, 0.19);
+  background-color: whitesmoke;
+}
+.class-test-box-1 {
+  display: flex;
+  justify-content: center;
+  background-color: wheat;
+  font-size: 34px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: underline;
+  width: 100%;
+  padding: 10px;
+}
+.class-test-box-2 {
+  font-size: 24px;
+  width: 100%;
+  padding: 10px;
+  max-height: 120px;
+  overflow-x: auto;
+}
+.class-test-box-3 {
+  width: 100%;
+  padding: 10px;
+}
+.words-controller {
+  cursor: pointer;
+  color: #0437f2;
+  text-decoration: underline;
+}
+.class-test-box-3 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+.class-test-button-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px black;
+  background-color: rgb(16, 152, 3);
+  transition: 0.5s;
+  height: 34px;
+  width: 100%;
+}
+.class-test-button-control:hover {
+  color: wheat;
+  background-color: #0c4d0e;
+  box-shadow: 0px 2px black;
+}
+
+.class-test-box-4 {
+  max-height: 340px;
+  overflow-x: auto;
+}
+
+.class-test-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.class-test-table th,
+.class-test-table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd; /* Add borders for better visibility */
+}
+
+.class-test-table thead th {
+  background-color: #008cba;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Set a fixed width for the ID column */
+.class-test-table td:first-child {
+  position: sticky;
+  left: 0;
+  width: 40px; /* Adjust the width as needed */
+  background-color: #008cba;
+  color: white;
+}
+
+/* Shift the other columns to the right */
+.class-test-table td:not(:first-child) {
+  background-color: white; /* Set background color for other cells */
+  margin-left: 40px; /* Adjust the margin to match the ID column width */
+}
+
+.start-class-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 50px;
+  border-radius: 2px;
+  margin-left: 24px;
+  transition: 0.5s;
+  background-color: #00151b;
+  color: white;
+}
+.start-class-btn:hover {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.l1t1-take-btn {
+  height: 42px;
+  width: 62px;
+  margin: 6px;
+  border: 2px solid black;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.l1t1-take-btn:hover {
+  background-color: black;
+  color: white;
+}
+.progress-bar {
+  width: 100%;
+  margin: 12px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+.quiz-items-wrapper {
+  width: 20%;
+  height: 100%;
+  margin: auto;
+}
+.quiz-items {
+  height: 18%;
+}
+.quiz-item {
+  height: 45%;
+  border: 2px solid black;
+  background-color: rgb(74, 33, 33);
+  color: white;
+  font-size: 38px;
+  text-align: center;
+}
+.quiz-item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+}
+.qz-itm-btn {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 8px;
+  background-color: rgb(202, 199, 199);
+  transition: 0.5s;
+}
+.qz-itm-btn:hover {
+  background-color: gray;
+  color: whitesmoke;
+}
+.right-wrong-indicator {
+  text-align: center;
+  background-color: #777;
+  margin-top: 2px;
+  border-radius: 4px;
+}
+.quiz-item-indicator {
+  width: 52px;
+  height: 52px;
+  border-radius: 32px;
+  background-color: red;
+  border: 1px black solid;
+  margin: 3px;
+}
+.quiz-item-indicator-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-listening-2 {
+  background-color: #0437f2;
+  transition: 0.5s;
+}
+/*TEST UI START*/
+.retake-button {
+  margin: 12px;
+  width: 84px;
+  height: 42px;
+  background-color: #0437f2;
+  color: white;
+  border-radius: 4px;
+}
+.next-button {
+  width: 84px;
+  height: 42px;
+  background-color: #06840a;
+  color: white;
+  border-radius: 4px;
+}
+.retake-button:hover {
+  background-color: #00151b;
+  color: white;
+  transition: 0.5s;
+}
