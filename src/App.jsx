@@ -15,7 +15,6 @@ import NormalPage from "./pages/NormalPage";
 import HardPage from "./pages/HardPage";
 import StartClass from "./admin/StartClass";
 // import Lesson1 from "./admin/units/lesson1";
-import Lesson1 from "./admin/units/lesson1";
 import L1Test1 from "./admin/activities/L1Test1";
 import Lesson2 from "./admin/units/Lesson2";
 import L2Test1 from "./admin/activities/L2Test1";
@@ -47,7 +46,7 @@ function App() {
         <Route path='/lvlHard' element={<HardPage />} />
         <Route path='/student/:sectionID' element={<Student />} />
         <Route path='/startClass/:sectionID' element={<StartClass />} />
-        <Route path='/lesson1/:sectionID' element={<Lesson1 />} />
+        {/* <Route path='/lesson1/:sectionID' element={<Lesson1 />} /> */}
         <Route path='/l1t1/:sectionID' element={<L1Test1 />} />
         <Route path='/lesson2/:sectionID' element={<Lesson2 />} />
         <Route path='/l2t1/:sectionID' element={<L2Test1 />} />
