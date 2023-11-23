@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Axios from "axios";
+import axios from "../admin/api/axios";
 
 const MLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,7 +9,8 @@ const MLogin = () => {
   const navigate = useNavigate();
 
   const login = () => {
-    Axios.post("http://localhost:3001/login", { username, password })
+    axios
+      .post("login", { username, password })
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("token", token); // Store the token in local storage
