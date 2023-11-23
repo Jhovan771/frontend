@@ -301,7 +301,7 @@ const Lesson1 = () => {
                         className={`indicator ${
                           isListening ? "active-listening" : ""
                         }`}></div>
-                    </div>{" "}
+                    </div>
                     <div className='error-message'>
                       {errorMessage && errorMessage}
                     </div>
