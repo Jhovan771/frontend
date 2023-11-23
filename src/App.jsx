@@ -14,6 +14,7 @@ import Practice from "./pages/Practice";
 import NormalPage from "./pages/NormalPage";
 import HardPage from "./pages/HardPage";
 import StartClass from "./admin/StartClass";
+// import Lesson1 from "./admin/units/lesson1";
 import Lesson1 from "./admin/units/lesson1";
 import L1Test1 from "./admin/activities/L1Test1";
 import Lesson2 from "./admin/units/Lesson2";
